@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruthvi R | Python Developer</title>
+    <meta name="description"
+        content="Portfolio of Pruthvi R, a Python Developer specializing in Flask/FastAPI, and AI-powered systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="background-grid"></div>
+    <div class="gradient-blob form-1"></div>
+    <div class="gradient-blob form-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><span>Pruthvi R</span></a>
+            <ul class="nav-links">
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-social">
+                    <a href="https://github.com/Spidey173" target="_blank" class="nav-icon-link" aria-label="GitHub Profile" title="GitHub">
+                        <i class="ph ph-github-logo"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn"><i class="ph ph-list"></i></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="badge">Python + AI</div>
+                <h1 class="hero-heading">
+                    Fast APIs <br>
+                    Smart systems <br>
+                    <span class="gradient-text">Robust backends</span>
+                </h1>
+                <p class="hero-subtext">I specialize in <span class="typewriter"></span><span
+                        class="cursor-blink">|</span></p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary btn-large">Explore My Work</a>
+                    <a href="Pruthvi_R_Resume.pdf" class="btn-secondary btn-large">Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-visual terminal-wrapper project-card">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-title">server.py — ~/portfolio</div>
+                </div>
+                <div class="terminal-body">
+                    <pre><code class="python">
+<span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI
+<span class="keyword">from</span> ai_engine <span class="keyword">import</span> RAGPipeline
+
+app = FastAPI(title=<span class="string">"Pruthvi.dev API"</span>)
+rag = RAGPipeline(model=<span class="string">"gemini-pro"</span>)
+
+<span class="decorator">@app.get</span>(<span class="string">"/developer"</span>)
+<span class="keyword">async def</span> <span class="function">get_profile</span>():
+    <span class="keyword">return</span> {
+        <span class="string">"name"</span>: <span class="string">"Pruthvi R"</span>,
+        <span class="string">"role"</span>: <span class="string">"Backend & AI Intern"</span>,
+        <span class="string">"mission"</span>: <span class="string">"Scale intelligence."</span>
+    }
+
+<span class="comment"># <span id="terminal-typing"></span><span class="cursor-blink">_</span></span>
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Expertise Section -->
+        <section id="expertise" class="section">
+            <h2 class="section-title">Core Capabilities</h2>
+            <p class="section-subtitle">Specialized in engineering robust digital ecosystems.</p>
+            <div class="expertise-grid">
+                <div class="expertise-card project-card appear">
+                    <div class="expertise-icon"><i class="ph ph-terminal-window"></i></div>
+                    <h3>Backend Engineering</h3>
+                    <p>Building robust REST APIs and data pipelines using Python, Flask, and
+                        FastAPI. Focusing on clean architecture, performance optimization, and relational database integrity.</p>
+                    <ul class="expertise-list">
+                        <li><i class="ph ph-check-circle"></i> API Development</li>
+                        <li><i class="ph ph-check-circle"></i> JWT Authentication</li>
+                        <li><i class="ph ph-check-circle"></i> Database Design</li>
+                    </ul>
+                </div>
+                <div class="expertise-card project-card appear" style="transition-delay: 0.1s">
+                    <div class="expertise-icon"><i class="ph ph-brain"></i></div>
+                    <h3>AI & Data Systems</h3>
+                    <p>Building Retrieval-Augmented Generation (RAG) pipelines and integrating complex LLMs (Gemini,
+                        Groq) to convert raw data into intelligent semantic search tools.</p>
+                    <ul class="expertise-list">
+                        <li><i class="ph ph-check-circle"></i> RAG Implementation</li>
+                        <li><i class="ph ph-check-circle"></i> FAISS Vector Search</li>
+                        <li><i class="ph ph-check-circle"></i> Prompt Engineering</li>
+                    </ul>
+                </div>
+                <div class="expertise-card project-card appear" style="transition-delay: 0.2s">
+                    <div class="expertise-icon"><i class="ph ph-browsers"></i></div>
+                    <h3>Full-Stack Integration</h3>
+                    <p>Bridging the gap between server logic and client experience with modern JavaScript, CSS
+                        frameworks, and asynchronous data fetching.</p>
+                    <ul class="expertise-list">
+                        <li><i class="ph ph-check-circle"></i> Modern JS (ES6+)</li>
+                        <li><i class="ph ph-check-circle"></i> Vanilla CSS & Bootstrap</li>
+                        <li><i class="ph ph-check-circle"></i> Jinja2 Templating</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section upgraded -->
+        <section id="skills" class="section">
+            <div class="skills-header-container appear">
+                <h4 class="sub-heading">TECHNOLOGY STACK</h4>
+                <h2 class="section-title" style="margin-bottom: 2rem;">Tools & Technologies</h2>
+            </div>
+
+            <div class="new-skills-grid">
+                <!-- Stack Category -->
+                <div class="skill-category-full appear">
+                    <div class="cat-title">Backend / Logic</div>
+                    <div class="cat-grid">
+                        <div class="tech-box"><i class="ph ph-file-py"></i><span>Python</span></div>
+                        <div class="tech-box"><i class="ph ph-fast-forward"></i><span>FastAPI</span></div>
+                        <div class="tech-box"><i class="ph ph-flask"></i><span>Flask</span></div>
+                        <div class="tech-box"><i class="ph ph-brackets-curly"></i><span>REST APIs</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category-full appear">
+                    <div class="cat-title">Frontend</div>
+                    <div class="cat-grid">
+                        <div class="tech-box"><i class="ph ph-file-js"></i><span>JavaScript</span></div>
+                        <div class="tech-box"><i class="ph ph-file-html"></i><span>HTML5</span></div>
+                        <div class="tech-box"><i class="ph ph-file-css"></i><span>CSS3</span></div>
+                        <div class="tech-box"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category-full appear">
+                    <div class="cat-title">Data & AI</div>
+                    <div class="cat-grid">
+                        <div class="tech-box"><i class="ph ph-database"></i><span>SQL</span></div>
+                        <div class="tech-box"><i class="ph ph-hard-drives"></i><span>PostgreSQL / MySQL</span></div>
+                        <div class="tech-box"><i class="ph ph-brain"></i><span>RAG & FAISS</span></div>
+                        <div class="tech-box"><i class="ph ph-sparkle"></i><span>Gemini API</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category-full appear">
+                    <div class="cat-title">Developer Tools</div>
+                    <div class="cat-grid">
+                        <div class="tech-box"><i class="ph ph-git-branch"></i><span>Git</span></div>
+                        <div class="tech-box"><i class="ph ph-github-logo"></i><span>GitHub</span></div>
+                        <div class="tech-box"><i class="ph ph-paper-plane-tilt"></i><span>Postman</span></div>
+                        <div class="tech-box"><i class="ph ph-code"></i><span>VS Code / PyCharm</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline upgraded -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <h3 class="role">AI Automation Intern</h3>
+                            <span class="company">Coresium</span>
+                            <span class="date">Apr 2026 – May 2026</span>
+                        </div>
+                        <ul class="duties">
+                            <li>Built and modified AI automation workflows using n8n.</li>
+                            <li>Integrated external APIs and automated data processing tasks.</li>
+                            <li>Assisted with workflow testing and deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item appear" style="transition-delay: 0.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <h3 class="role">Python Full Stack Intern</h3>
+                            <span class="company">PyGenicArc (Remote)</span>
+                            <span class="date">Feb 2025 – May 2025</span>
+                        </div>
+                        <ul class="duties">
+                            <li>Led a 4-member team in developing a Python-based web application during a collaborative
+                                internship program.</li>
+                            <li>Applied Python, Flask, SQL, and frontend integration concepts to build and present a
+                                functional project.</li>
+                            <li>Contributed to backend feature implementation, debugging, and API integration tasks.
+                            </li>
+                            <li>Collaborated in an Agile-style workflow with task distribution, project discussions, and
+                                final technical presentation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications New Section -->
+        <section id="certifications" class="section">
+            <div class="skills-header-container appear">
+                <h4 class="sub-heading">CREDENTIALS</h4>
+                <h2 class="section-title">Certifications & Training</h2>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card project-card appear">
+                    <div class="cert-icon meta-icon"><i class="ph ph-meta-logo"></i></div>
+                    <div class="cert-info">
+                        <h3>Meta Full-Stack Developer Specialization</h3>
+                        <p>Coursera</p>
+                        <span class="cert-date">Acquired: 2025</span>
+                    </div>
+                </div>
+
+                <div class="cert-card project-card appear" style="transition-delay: 0.1s">
+                    <div class="cert-icon cisco-icon"><i class="ph ph-network"></i></div>
+                    <div class="cert-info">
+                        <h3>Python Essentials 1</h3>
+                        <p>Cisco Networking Academy</p>
+                        <span class="cert-date">Acquired: 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="skills-header-container appear">
+                <h4 class="sub-heading">PORTFOLIO</h4>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1 (Face Detection) -->
+                <div class="project-card appear">
+                    <div class="project-image">
+                        <img src="assets/face_detection.webp" alt="Face Detection Streaming System">
+                        <div class="project-overlay">
+                            <a href="https://real-time-face-detection-5p44.onrender.com" class="btn-link"
+                                target="_blank"><i class="ph ph-globe"></i> Live Demo</a>
+                            <a href="https://github.com/Spidey173/Real-Time-Face-Detection-Video-Streaming-System.git"
+                                class="btn-link secondary" target="_blank"><i class="ph ph-github-logo"></i>
+                                View Source</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Real-Time Face Detection Streaming</h3>
+                        </div>
+                        <p>Low-latency video streaming platform using WebSockets and MediaPipe for real-time face
+                            detection, ROI tracking, and live annotated video rendering.</p>
+                        <div class="project-tech">
+                            <span>FastAPI</span><span>WebSockets</span><span>MediaPipe</span><span>React</span><span>PostgreSQL</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (PDF Intel) -->
+                <div class="project-card appear" style="transition-delay: 0.1s">
+                    <div class="project-image">
+                        <img src="assets/pdf_intel_mockup.png" alt="AI PDF Tool">
+                        <div class="project-overlay">
+                            <a href="https://huggingface.co/spaces/Spidey173/insightpdf" class="btn-link"
+                                target="_blank"><i class="ph ph-globe"></i> Live Demo</a>
+                            <a href="https://github.com/Spidey173/PDF.git" class="btn-link secondary" target="_blank"><i
+                                    class="ph ph-github-logo"></i> View Source</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI-Powered PDF Intelligence Tool</h3>
+                        <p>A full-stack RAG-based application enabling semantic search across multiple PDFs with source
+                            citations.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>FastAPI</span><span>FAISS</span><span>Gemini API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (ChibiBytes) -->
+                <div class="project-card appear" style="transition-delay: 0.2s">
+                    <div class="project-image">
+                        <img src="assets/chibi_bytes_mockup.png" alt="ChibiBytes Platform">
+                        <div class="project-overlay">
+                            <a href="https://chibibytes-2.onrender.com/" class="btn-link" target="_blank"><i
+                                    class="ph ph-globe"></i> Live Demo</a>
+                            <a href="https://github.com/Spidey173/ChibiBytes.git" class="btn-link secondary"
+                                target="_blank"><i class="ph ph-github-logo"></i> View Source</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ChibiBytes – AI Content Platform</h3>
+                        <p>Developed an authentication and watchlist API using Flask and PostgreSQL, integrating an LLM-powered recommendation engine for personalized content discovery.</p>
+                        <div class="project-tech">
+                            <span>Flask</span><span>PostgreSQL</span><span>JavaScript</span><span>Blueprints</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (DailyDrop) -->
+                <div class="project-card appear" style="transition-delay: 0.3s">
+                    <div class="project-image">
+                        <img src="assets/dailydrop_mockup.png" alt="DailyDrop E-commerce">
+                        <div class="project-overlay">
+                            <a href="https://dailydrop-2faq.onrender.com/" class="btn-link" target="_blank"><i
+                                    class="ph ph-globe"></i> Live Demo</a>
+                            <a href="https://github.com/Spidey173/Daily-Drop.git" class="btn-link secondary"
+                                target="_blank"><i class="ph ph-github-logo"></i> View Source</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>DailyDrop – E-Commerce Platform</h3>
+                        <p>Engineered an e-commerce API managing secure checkouts, complex relational user data via PostgreSQL, and role-based access for an admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Glitch4ce) -->
+                <div class="project-card appear" style="transition-delay: 0.4s">
+                    <div class="project-image">
+                        <img src="assets/glitch4ce.webp" alt="Glitch4ce Gaming Hub">
+                        <div class="project-overlay">
+                            <a href="https://glitch4ce.onrender.com/" class="btn-link" target="_blank"><i
+                                    class="ph ph-globe"></i> Live Demo</a>
+                            <a href="https://github.com/Spidey173/Glitch4ce.git" class="btn-link secondary"
+                                target="_blank"><i class="ph ph-github-logo"></i> View Source</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Glitch4ce – Gaming Hub</h3>
+                        </div>
+                        <p>Built a user authentication and gameplay analytics API using Flask, handling concurrent user sessions and fast data retrieval backed by PostgreSQL.</p>
+                        <div class="project-tech">
+                            <span>Flask</span><span>Python</span><span>PostgreSQL</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section appear">
+            <div class="card contact-card project-card">
+                <h2 class="section-title">Ready to Build Something Amazing?</h2>
+                <p>Let's collaborate on your next project. Whether you need scalable Python APIs, intelligent AI
+                    integrations, or robust web services, I'm here to help.</p>
+                <div class="contact-links">
+                    <a href="mailto:pruthvi.r0006@gmail.com" class="contact-item">
+                        <i class="ph ph-envelope-simple"></i>
+                        pruthvi.r0006@gmail.com
+                    </a>
+                    <a href="tel:+919538118708" class="contact-item">
+                        <i class="ph ph-phone"></i>
+                        +91 9538118708
+                    </a>
+                    <a href="https://linkedin.com/in/pruthvi-r-48ba9b2b4" target="_blank" class="contact-item">
+                        <i class="ph ph-linkedin-logo"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Spidey173" target="_blank" class="contact-item">
+                        <i class="ph ph-github-logo"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Pruthvi R. Built with precision and code.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
